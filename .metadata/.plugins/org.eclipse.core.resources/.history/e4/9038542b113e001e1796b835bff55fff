@@ -120,7 +120,7 @@ public class ChessMatch {
 		return(ChessPiece)capturedPiece;
 	}
 	
-	public ChessPiece replacePromotedPiece(String type) {
+	public ChessPiece replacePRomotedPiece(String type) {
 		if (promoted ==null) {
 			throw new IllegalStateException("There is no piece to be promoted");
 		}
@@ -134,9 +134,6 @@ public class ChessMatch {
 		
 		ChessPiece newPiece = newPiece(type, promoted.getColor());
 		board.placePiece(newPiece, pos);
-		piecesOnTheBoard.add(newPiece);
-		
-		return newPiece;
 	}
 	
 	
