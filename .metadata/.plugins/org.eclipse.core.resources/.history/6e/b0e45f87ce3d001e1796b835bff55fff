@@ -75,12 +75,7 @@ public class ChessMatch {
 		
 		check = (testCheck(opponent(currentPlayer))) ? true : false;
 		
-		if (testCheckMate(opponent(currentPlayer))) {
-			checkMate = true;
-		}
-		else {		
 		nextTurn();
-		}
 		return(ChessPiece)capturedPiece;
 	}
 	
@@ -172,10 +167,6 @@ public class ChessMatch {
 						Position target = new Position(i, j);
 						Piece capturedPiece = makeMove(source, target);
 						boolean testCheck = testCheck(color);
-						undoMove(source, target, capturedPiece);
-						if(!testCheck) {
-							return false;
-						}
 					}
 				}
 			}

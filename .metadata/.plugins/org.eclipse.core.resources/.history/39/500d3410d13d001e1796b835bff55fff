@@ -78,9 +78,8 @@ public class ChessMatch {
 		if (testCheckMate(opponent(currentPlayer))) {
 			checkMate = true;
 		}
-		else {		
+		
 		nextTurn();
-		}
 		return(ChessPiece)capturedPiece;
 	}
 	
