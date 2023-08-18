@@ -30,6 +30,7 @@ public class ChessMatch {
 		board = new Board(8,8);
 		turn = 1;
 		currentPlayer = Color.WHITE;
+		check = false;
 		initialSetup();
 	}
 	
@@ -50,7 +51,7 @@ public class ChessMatch {
 	}
 	
 	public ChessPiece getEnPassantVulnerable() {
-		return enPassantVulnerable;
+		return enPassantVulnerable();
 	}
 	
 	public ChessPiece[][] getPieces(){
